@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: ArquitecturaHexagonalDemo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/hexagonal
+    password: 'israel1098'
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+        ddl-auto: update
+    show-sql: true
+    generate-ddl: true
+  
+  data:
+    mongodb:
+      database: hexagonal
+      host: localhost
+      port: 27017
+    redis:
+      database: 0
+      host: localhost
+      port: 16379
+      password: mypass
+      timeout: 60000
+
+server:
+    port: 8086
+    servlet:
+        context-path: /hexagonal
+        session:
+            timeout: 21600s
+
+            
